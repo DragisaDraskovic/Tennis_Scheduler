@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet  author="stefan"  id="schedule-data">
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-10T18:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-10T19:30:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="1"/>
+            <column  name="id"  value="1"/>
+        </insert>
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-10T19:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-10T20:00:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="1"/>
+            <column  name="id"  value="2"/>
+        </insert>
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-10T18:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-10T19:30:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="2"/>
+            <column  name="id"  value="3"/>
+        </insert>
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-10T19:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-10T20:00:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="2"/>
+            <column  name="id"  value="4"/>
+        </insert>
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-11T18:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-11T19:30:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="1"/>
+            <column  name="id"  value="5"/>
+        </insert>
+        <insert tableName="schedule">
+            <column  name="start_date"  value="2022-09-11T19:30:00.001Z"/>
+            <column  name="end_date"  value="2022-09-11T20:00:00.001Z"/>
+            <column  name="player"  value="1"/>
+            <column  name="court"  value="1"/>
+            <column  name="id"  value="6"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

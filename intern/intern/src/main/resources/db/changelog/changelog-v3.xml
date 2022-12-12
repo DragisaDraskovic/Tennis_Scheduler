@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet  author="liquibase-docs"  id="dropTable-example">
+        <dropTable  cascadeConstraints="true"
+                    catalogName="postgreSQL"
+                    schemaName="public"
+                    tableName="item"/>
+    </changeSet>
+    <changeSet  author="Dragisa"  id="1213">
+        <insert  catalogName="postgreSQL"
+                 dbms="postgres"
+                 schemaName="public"
+                 tableName="player">
+            <column  name="first_name"  value="test_insert"/>
+            <column  name="last_name"  value="test_insert"/>
+            <column  name="date_of_birth"  value="24-08-2022"/>
+            <column  name="email"  value="test@insert"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

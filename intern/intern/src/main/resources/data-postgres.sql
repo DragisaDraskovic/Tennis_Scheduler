@@ -1,0 +1,1 @@
+--insert into admin(email, password, role) values ("mika@gmail.com", "$2a$12$koZUbdBUXMwGc6fwHwxnjeUFGNfiSx75cCkLJVuyNcxvemGMujYHe","admin");

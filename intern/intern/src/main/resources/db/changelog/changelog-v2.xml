@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <changeSet id="2" author="vanja">
+        <createTable tableName="admin">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="admin_id_pk" />
+            </column>
+            <column name="email" type="varchar(255)" >
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="password" type="varchar(255)"/>
+        </createTable>
+
+        <createTable tableName="court">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="court_id_pk" />
+            </column>
+            <column name="name" type="varchar(255)" >
+                <constraints unique="true" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1" author="Dragisa">
+        <createTable tableName="player">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="player_id_pk" />
+            </column>
+            <column name="first_name" type="varchar(250)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="varchar(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_of_birth" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(50)">
+                <constraints unique="true"  nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="schedule">
+            <column name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="schedule_pk"/>
+            </column>
+            <column name="start_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="player" type="bigint" >
+                <constraints validateForeignKey="true"/>
+            </column>
+            <column name="court" type="bigint">
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
